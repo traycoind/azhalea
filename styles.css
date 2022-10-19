@@ -99,7 +99,8 @@ header {
 }
 
 .profile-pic {
-    width: 100px;
+    width: 90px;
+    height: 90px;
     margin-bottom: 10px;
     border: 5px solid var(--body-color);
     border-radius: 50%;
@@ -108,6 +109,10 @@ header {
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     box-shadow: -0px 5px 23px -2px var(--light-blue);
+    background-image: url(./img/badge-blue.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
@@ -229,6 +234,10 @@ footer {
     }
 } */
 
+.only-mobile {
+    display: none;
+}
+
 @media (min-width: 800px) {
  
     main {
@@ -258,5 +267,24 @@ footer {
         height: 90px;
     }
 
+    .only-mobile {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #00336F;
+        color: white;
+        z-index: 99;
+        padding: 30px;
+    }
 
+        .only-mobile h2 {
+            font-size: 4rem;
+            text-align: center;
+            line-height: 6rem;
+        }
 }
